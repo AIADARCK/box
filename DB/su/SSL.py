@@ -39,6 +39,9 @@ print(Fore.GREEN, "Done", Fore.RESET)
 time.sleep(2)
 print ("6. set SSL certificate")
 os.system('~/.acme.sh/acme.sh --issue -d %s --standalone' % subdomin)
+os.system('~/.acme.sh/acme.sh --installcert -d %s --key-file /root/private.key --fullchain-file /root/cert.crt' % subdomin)
+~/.acme.sh/acme.sh --installcert -d host.mydomain.com --key-file /root/private.key --fullchain-file /root/cert.crt
+
 print(Fore.GREEN, "Done", Fore.RESET)
 time.sleep(1)
 print(Fore.WHITE,"***********************************************")
