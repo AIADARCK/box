@@ -1,12 +1,10 @@
+from colorama import *
+import time
 import os
-from typing import Dict, Callable
 
-from colorama import Fore
-
-
-
-print(Fore.WHITE, """
+print(Fore.WHITE,"""
   _______________________________________________________________________
+  
 + ______________________________________________________________________ +
  |                                                                      |
  |   IIIIIIIIIII   III   IIIIIIIIIII   IIIIII   IIIIIII  IIIII   II  II |
@@ -19,61 +17,43 @@ print(Fore.WHITE, """
 + ----------------- | BOX SCRIPT |                                        +
   _______________________________________________________________________
 
-  ++++ Script Helper Sarvar V2ray
+  ++++ Script Helper Sarvar V2ray 
+  Subscribe to the YouTube channel @AIADARCK                                                                      
 """)
-print(Fore.GREEN, """
+print(Fore.GREEN,"""
   #-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-#
   #-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-#    
 """, Fore.RESET)
-
-print(" 1. Update server \n 2. Install Panels \n 3. SSL Certificate \n 4. Box scripts \n 5. Settings \n 6. Security \n 7. Debug Server \n 8. Tunnel Server(iptables) \n 9. Exit ")
-choice = input("Enter Menu Number: ")
-
-if choice == '9':
-    print(Fore.RED, "Press 'Control + C' to exit.", Fore.RESET)
-    print("Good luck!")
-    
-
-    try:
-        options[choice]()
-    except KeyError:
-        print("Error: Invalid choice. Try again.")
+print(" 1. Update sarver \n 2. Inestall Panels \n 3. SSL Certificate \n 4. Box scripts \n 5. Settings \n 6. Security \n 7. Debug Server \n 8. Tunnel Servar(iptables) \n 9. Exit ")
+num = input("Enter Number Menu : ")
 
 
-def update_server() -> None:
+if num == '1':
     path = os.path.join(os.path.dirname(__file__), "DB/su/UpdateCod.py")
     exec(open(path).read())
-
-
-def install_panels() -> None:
+elif num == '2':
     path = os.path.join(os.path.dirname(__file__), "DB/su/Panels.py")
     exec(open(path).read())
-
-
-def ssl_certificate() -> None:
+elif num == '3':
     path = os.path.join(os.path.dirname(__file__), "DB/su/SSL.py")
     exec(open(path).read())
-
-
-def box_scripts() -> None:
+elif num == '4':
     path = os.path.join(os.path.dirname(__file__), "DB/su/BoxScripts.py")
     exec(open(path).read())
-
-
-def settings() -> None:
+elif num == '5':
     path = os.path.join(os.path.dirname(__file__), "DB/su/Settings.py")
     exec(open(path).read())
-
-
-def security() -> None:
+elif num == '6':
     path = os.path.join(os.path.dirname(__file__), "DB/su/security.py")
-    exec(open(path).read())
-
-
-def debug_server() -> None:
+    exec(open(path).read())        
+elif num == '7':
     path = os.path.join(os.path.dirname(__file__), "DB/su/Debug.py")
     exec(open(path).read())
-
-
-def tunnel_server() -> None:
+elif num == '8':
     path = os.path.join(os.path.dirname(__file__), "DB/Tunnel.py")
+    exec(open(path).read())    
+elif num == '9':
+    print(Fore.RED, "Use'Control + C'to exit", Fore.RESET)
+    print("Good luck")
+else :
+    ("Error!!")
